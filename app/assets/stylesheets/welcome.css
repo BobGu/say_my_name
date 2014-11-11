@@ -1,0 +1,28 @@
+header {
+  width:100%;
+  height: 140px;
+  color:white;
+  background-color: #262626;
+  border-bottom: 4px solid #05c2d1;
+}
+
+.game {
+  margin-top: 3%;
+}
+
+.name-bank li {
+  list-style:none;
+  font-size: 1.5em;
+}
+
+.picture img {
+  width:70%;
+  height: auto;
+  margin-bottom: 10%;
+}
+
+.name-bank {
+  width: 14%;
+  position: fixed;
+  margin-left: 80%;
+}
