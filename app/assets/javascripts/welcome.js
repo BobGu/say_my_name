@@ -1,8 +1,7 @@
 $(document).ready (function () {
   guessChecker = function(guess, thing) {
-      name = $(thing).parents('div').prop('id');
+      var name = $(thing).parents('div').prop('id');
       if (guess === name){
-
             return true;
           }
       else {
@@ -11,12 +10,20 @@ $(document).ready (function () {
   };
 
   $(".guess").click (function(){
-    guess = $(this).prev().val().toLowerCase();
+    var guess = $(this).prev().val().toLowerCase();
       if(guessChecker(guess, this)){
             alert('this is right');
           }
       else{
-            alert('this is wrong');
+            var find_name = function ($this) {
+              var name = $this.parents('div').prop('id');
+              return name
+            };
+            var name = find_name($(this))
+            $(this).parent().parent().css('opacity', '0.5').css('color', 'red').append('<h3>' + name + '</h3>');
+            $('.' + name).css('color', 'red');
+            $(this).prev().hide();
+            $(this).hide();
           }
   });
 

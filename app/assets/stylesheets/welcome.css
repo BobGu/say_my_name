@@ -29,6 +29,7 @@ header {
 
 .picture {
   margin-bottom: 5%;
+  height: 20%;
 }
 
 .picture img {
@@ -39,4 +40,8 @@ header {
 
 #name-input {
   width: 45%;
+}
+
+.picture_off {
+  opacity: 0.3;
 }
