@@ -6,12 +6,11 @@
     <h1>Say My Name</h1>
     <div class= 'col-lg-10 row-of-pictures pull-left'>
       <% @shuffled_students.each do |student| %>
-      <div id='<%=student%>' class= 'col-lg-4 picture-on picture-off picture'>
+      <div id='<%=student.name%>' class= 'col-lg-4 picture-on picture-off picture'>
         <%= image_tag("#{student.name}.jpg") %>
         <form class="form-inline" role="form">
-          <label class="sr-only">Email address</label>
-          <input type="email" class="form-control" id='name-input' placeholder="Say My Name"></input>
-          <button class="btn btn-primary">Guess</button>
+          <input class="form-control" id='name-input' placeholder="Say My Name"></input>
+          <li class="btn btn-primary guess">Guess</button>
         </form>
       </div>
       <% end %>
@@ -20,7 +19,7 @@
     <div class='name-bank panel panel-primary pull-right'>
       <div class= 'panel-heading'>Name Bank</div>
         <div class='panel-body'>
-        <% @shuffled_students.each do |student| %>
+        <% @shuffled_students.shuffle.each do |student| %>
           <li><%= student.name.capitalize %></li>
         <% end %>
         </div>

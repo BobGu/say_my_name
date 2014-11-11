@@ -1,7 +1,8 @@
 $(document).ready (function () {
   guessChecker = function(guess, thing) {
-      name = $(thing).parent().find('div').prop('src');
+      name = $(thing).parents('div').prop('id');
       if (guess === name){
+
             return true;
           }
       else {
@@ -10,7 +11,7 @@ $(document).ready (function () {
   };
 
   $(".guess").click (function(){
-    guess = $(this).parent().find('input').val();
+    guess = $(this).prev().val().toLowerCase();
       if(guessChecker(guess, this)){
             alert('this is right');
           }
@@ -19,5 +20,13 @@ $(document).ready (function () {
           }
   });
 
+  $('form input').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+
+  $
 
 });
