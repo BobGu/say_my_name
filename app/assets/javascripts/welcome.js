@@ -1,6 +1,6 @@
 $(document).ready (function () {
   guessChecker = function(guess, thing) {
-      name = $(thing).parent().find('img').prop('src');
+      name = $(thing).parent().find('div').prop('src');
       if (guess === name){
             return true;
           }

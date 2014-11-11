@@ -6,23 +6,37 @@ header {
   border-bottom: 4px solid #05c2d1;
 }
 
+.row-of-pictures {
+  margin-left: 2%;
+}
 .game {
   margin-top: 3%;
+  text-align:center;
+}
+
+.game h1 {
+  margin-bottom: 4%;
+}
+
+.name-bank {
+  margin-right: 5%;
 }
 
 .name-bank li {
   list-style:none;
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+
+.picture {
+  margin-bottom: 5%;
 }
 
 .picture img {
   width:70%;
   height: auto;
-  margin-bottom: 10%;
+  margin-bottom: 1%;
 }
 
-.name-bank {
-  width: 14%;
-  position: fixed;
-  margin-left: 80%;
+#name-input {
+  width: 45%;
 }
