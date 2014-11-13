@@ -12,7 +12,15 @@ $(document).ready (function () {
   $(".guess").click (function(){
     var guess = $(this).prev().val().toLowerCase();
       if(guessChecker(guess, this)){
-            alert('this is right');
+            var find_name = function ($this) {
+              var name = $this.parents('div').prop('id');
+              return name
+            };
+            var name = find_name($(this))
+            $(this).parent().parent().css('color', 'green').append('<h3>' + name + '</h3>');
+            $('.' + name).css('color', 'green');
+            $(this).prev().hide();
+            $(this).hide();
           }
       else{
             var find_name = function ($this) {
