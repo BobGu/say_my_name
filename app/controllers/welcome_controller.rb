@@ -1,5 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    @shuffled_students = Student.all.shuffle
+    @ohsix = Student.ohsix.shuffle
+    @ohnine = Student.ohnine.shuffle
+    @ten = Student.ten.shuffle
   end
 end

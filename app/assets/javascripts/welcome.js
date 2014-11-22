@@ -9,8 +9,14 @@ $(document).ready (function () {
           }
   };
 
+  function capitaliseFirstLetter(string)
+  {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   $(".guess").click (function(){
     var guess = $(this).prev().val().toLowerCase();
+    var guess = capitaliseFirstLetter(guess);
       if(guessChecker(guess, this)){
             var find_name = function ($this) {
               var name = $this.parents('div').prop('id');

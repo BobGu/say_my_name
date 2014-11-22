@@ -1,13 +1,17 @@
 <div id='wrapper'>
   <header>
-
+    <ul>
+      <li id='play_ohsix'>1406</li>
+      <li id='play_ohnine'>1409</li>
+      <li id='play_ohten'>1410</li>
+    </ul>
   </header>
-  <div class='row game'>
+  <div class='row game ohsix'>
     <h1>Say My Name</h1>
     <div class= 'col-lg-10 row-of-pictures pull-left'>
-      <% @shuffled_students.each do |student| %>
+      <% @ohsix.each do |student| %>
       <div id='<%=student.name%>' class= 'col-lg-4 picture'>
-        <%= image_tag "#{student.name}.jpg" %>
+        <%= image_tag "#{student.picture}.jpg" %>
         <form class="form-inline" role="form">
           <input class="form-control" id='name-input' placeholder="Say My Name"></input>
           <li class="btn btn-primary guess">Guess</button>
@@ -19,7 +23,55 @@
     <div class='name-bank panel panel-primary pull-right'>
       <div class= 'panel-heading'>Name Bank</div>
         <div class='panel-body'>
-        <% @shuffled_students.shuffle.each do |student| %>
+        <% @ohsix.shuffle.each do |student| %>
+          <li class='<%= student.name %>' ><%= student.name.capitalize %></li>
+        <% end %>
+        </div>
+    </div>
+  </div>
+
+  <div class='row game ohnine'>
+    <h1>Say My Name</h1>
+    <div class= 'col-lg-10 row-of-pictures pull-left'>
+      <% @ohnine.each do |student| %>
+      <div id='<%=student.name%>' class= 'col-lg-4 picture'>
+        <%= image_tag "#{student.picture}.jpg" %>
+        <form class="form-inline" role="form">
+          <input class="form-control" id='name-input' placeholder="Say My Name"></input>
+          <li class="btn btn-primary guess">Guess</button>
+        </form>
+      </div>
+      <% end %>
+    </div>
+
+    <div class='name-bank panel panel-primary pull-right'>
+      <div class= 'panel-heading'>Name Bank</div>
+        <div class='panel-body'>
+        <% @ohnine.shuffle.each do |student| %>
+          <li class='<%= student.name %>' ><%= student.name.capitalize %></li>
+        <% end %>
+        </div>
+    </div>
+  </div>
+
+  <div class='row game ten'>
+    <h1>Say My Name</h1>
+    <div class= 'col-lg-10 row-of-pictures pull-left'>
+      <% @ten.each do |student| %>
+      <div id='<%=student.name%>' class= 'col-lg-4 picture'>
+        <%= image_tag "#{student.picture}.jpg" %>
+        <form class="form-inline" role="form">
+          <input class="form-control" id='name-input' placeholder="Say My Name"></input>
+          <li class="btn btn-primary guess">Guess</button>
+        </form>
+      </div>
+      <% end %>
+    </div>
+
+    <div class='name-bank panel panel-primary pull-right'>
+      <div class= 'panel-heading'>Name Bank</div>
+        <div class='panel-body'>
+        <% @ten.shuffle.each do |student| %>
           <li class='<%= student.name %>' ><%= student.name.capitalize %></li>
         <% end %>
         </div>
