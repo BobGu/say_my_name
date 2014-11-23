@@ -1,21 +1,23 @@
 <div id='wrapper'>
   <header>
-    <ul>
-      <li id='play_ohsix'>1406</li>
-      <li id='play_ohnine'>1409</li>
-      <li id='play_ohten'>1410</li>
-    </ul>
+    <div class='menu'>
+      <h1 class='col-lg-8'>Faces of Turing</h1>
+      <ul class='filter col-lg-4'>
+        <li id='ohsix'>1406</li>
+        <li id='ohnine'>1409</li>
+        <li id='ten'>1410</li>
+      </ul>
+    </div>
   </header>
   <div class='row game ohsix'>
-    <h1>Say My Name</h1>
     <div class= 'col-lg-10 row-of-pictures pull-left'>
       <% @ohsix.each do |student| %>
       <div id='<%=student.name%>' class= 'col-lg-4 picture'>
         <%= image_tag "#{student.picture}.jpg" %>
-        <form class="form-inline" role="form">
+        <div class="form-inline" role="form">
           <input class="form-control" id='name-input' placeholder="Say My Name"></input>
           <li class="btn btn-primary guess">Guess</button>
-        </form>
+        </div>
       </div>
       <% end %>
     </div>
@@ -24,7 +26,7 @@
       <div class= 'panel-heading'>Name Bank</div>
         <div class='panel-body'>
         <% @ohsix.shuffle.each do |student| %>
-          <li class='<%= student.name %>' ><%= student.name.capitalize %></li>
+          <li class='<%= student.name %> col-lg-6' ><%= student.name.capitalize %></li>
         <% end %>
         </div>
     </div>
@@ -48,7 +50,7 @@
       <div class= 'panel-heading'>Name Bank</div>
         <div class='panel-body'>
         <% @ohnine.shuffle.each do |student| %>
-          <li class='<%= student.name %>' ><%= student.name.capitalize %></li>
+          <li class='<%= student.name %> col-lg-6' ><%= student.name.capitalize %></li>
         <% end %>
         </div>
     </div>
@@ -72,7 +74,7 @@
       <div class= 'panel-heading'>Name Bank</div>
         <div class='panel-body'>
         <% @ten.shuffle.each do |student| %>
-          <li class='<%= student.name %>' ><%= student.name.capitalize %></li>
+          <li class='<%= student.name %> col-lg-6' ><%= student.name.capitalize %></li>
         <% end %>
         </div>
     </div>
