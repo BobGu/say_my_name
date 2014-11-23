@@ -14,12 +14,12 @@
       <% @ohsix.each do |student| %>
       <div id='<%=student.name%>' class= 'col-lg-4 picture'>
         <%= image_tag "#{student.picture}.jpg" %>
-        <div class="form-inline" role="form">
+        <form class="form-inline" role="form">
           <input class="form-control" id='name-input' placeholder="Say My Name"></input>
           <li class="btn btn-primary guess">Guess</button>
+          </form>
         </div>
-      </div>
-      <% end %>
+        <% end %>
     </div>
 
     <div class='name-bank panel panel-primary pull-right'>
@@ -33,7 +33,6 @@
   </div>
 
   <div class='row game ohnine'>
-    <h1>Say My Name</h1>
     <div class= 'col-lg-10 row-of-pictures pull-left'>
       <% @ohnine.each do |student| %>
       <div id='<%=student.name%>' class= 'col-lg-4 picture'>
@@ -57,7 +56,6 @@
   </div>
 
   <div class='row game ten'>
-    <h1>Say My Name</h1>
     <div class= 'col-lg-10 row-of-pictures pull-left'>
       <% @ten.each do |student| %>
       <div id='<%=student.name%>' class= 'col-lg-4 picture'>

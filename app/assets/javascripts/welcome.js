@@ -1,6 +1,7 @@
 $(document).ready (function () {
   guessChecker = function(guess, thing) {
       var name = $(thing).parents('div').prop('id');
+      alert(name);
       if (guess === name){
             return true;
           }
@@ -44,10 +45,11 @@ $(document).ready (function () {
   $(document).keypress(function(event){
     if(event.keyCode == 13) {
       event.preventDefault();
+      return false;
     }
   });
 
-  //this is going to filter by cohort numbers
+  // this is going to filter by cohort numbers
   $('.ohsix').show();
   $('.ohnine').hide();
   $('.ten').hide();
