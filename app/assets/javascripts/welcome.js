@@ -41,8 +41,9 @@ $(document).ready (function () {
           }
   });
 
-  $(document).keypress(function(event){
+  $('.name-input').keypress(function(event){
     if(event.keyCode == 13) {
+      $(this).siblings('.guess').click();
       event.preventDefault();
       return false;
     }
