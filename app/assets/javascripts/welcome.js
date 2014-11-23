@@ -1,7 +1,6 @@
 $(document).ready (function () {
   guessChecker = function(guess, thing) {
       var name = $(thing).parents('div').prop('id');
-      alert(name);
       if (guess === name){
             return true;
           }
