@@ -3,6 +3,10 @@ class Student < ActiveRecord::Base
     Student.where(cohort: '1406')
   end
 
+  def self.ohseven
+    Student.where(cohort: '1407')
+  end
+
   def self.ohnine
     Student.where(cohort: '1409')
   end
