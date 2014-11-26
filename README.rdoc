@@ -1,5 +1,5 @@
 == README
 
 This application is a name memorization game for Turing school.  The purpose of the app
-is to help better build community amongst the studnets and staff at Turing School.
+is to help better build community amongst the students and staff at Turing School.
 
